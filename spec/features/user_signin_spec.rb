@@ -3,12 +3,12 @@ require "rails_helper"
 RSpec.feature "User signing in" do
 
   background do
-    @user = User.create!(email: "example@gmail.com", password: "password", password_confirmation: "password")
+    @user = create(:user)
   end
 
   scenario "successfully" do
     sign_in @user
-    
+
     expect(page).to have_content @user.email
   end
 
