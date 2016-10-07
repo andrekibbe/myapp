@@ -1,0 +1,11 @@
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">MyApp</a>
+    <ul class="nav navbar-nav navbar-right">
+      <li><%= link_to "Write a story", new_post_path %></li>
+      <% if user_signed_in? %>
+        <%= current_user.email %>
+      <% end %>
+    </ul>
+  </div>
+</nav>
