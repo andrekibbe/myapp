@@ -5,6 +5,8 @@
       <li><%= link_to "Write a story", new_post_path %></li>
       <% if user_signed_in? %>
         <%= current_user.email %>
+        <% else %>
+        <li><%= link_to "Sign in / Sign up", new_user_session_path %></li>
       <% end %>
     </ul>
   </div>
